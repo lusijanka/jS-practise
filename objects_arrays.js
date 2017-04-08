@@ -62,10 +62,8 @@ function Animal(name,age) {
   this.age = age;
 }
 
-// Let's make bob and susan again, using our constructor
 var spark = new Animal("Spark", 2);
 var honey = new Animal("Honey", 5);
-// help us make george, whose name is "George Washington" and age is 275
 var cactoo = new Animal("Cactoo", 15);
 
 function Animal(name,age) {
@@ -123,8 +121,7 @@ function list() {
 	}
 }
 
-/*Create a search function
-then call it passing "Jones"*/
+/*Creatin a search function */
 var search = function(lastName) {
     var contactsLength = contacts.length;
     for (var i = 0; i<contactsLength; i++) {
@@ -134,6 +131,38 @@ var search = function(lastName) {
     };
 };
 search("Johnson");
+// Searching 2 
+var friends = {
+    bill: {
+        firstName: 'Bill',
+        lastName: 'Suarez',
+        number: '82939172',
+        address: ['Wisteria Lane', '34442', 'Fairview']
+        },
+    steve: {
+        firstName: 'Steve',
+        lastName: 'Mackinsky',
+        number: '8279172373',
+        address: ['Collin street', '7478', 'New York, NY']
+            
+        }
+};
+var list = function (friends) {
+    for (var key in friends) {
+    console.log(key);
+    };
+};
+var search = function(name) {
+    for (var key in friends) {
+        if (friends[key].firstname === name) {
+            console.log(friends[key]);
+            return friends[key];
+        } else {
+            console.log('No');
+            return friends[key];
+        };
+    };
+};
 
 //Cashregister
 var cashRegister = {
